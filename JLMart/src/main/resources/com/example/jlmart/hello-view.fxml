@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1015.0" style="-fx-background-color: #343434;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jlmart.SignController">
+   <top>
+      <VBox prefHeight="103.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@JLmart-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Separator opacity="0.38" prefHeight="2.0" prefWidth="766.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="label1" alignment="CENTER" text="Username" textAlignment="CENTER" textFill="#ffd1d1">
+                     <padding>
+                        <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                     </padding>
+                     <font>
+                        <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameBox" />
+               </children>
+               <padding>
+                  <Insets top="100.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="-30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1015.0">
+               <children>
+                  <Label alignment="CENTER" text="Password" textFill="#ffd1d1">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordBox" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="1015.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signInAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #6C6C6C;" text="sign in" textFill="#ffd1d1">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="1015.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="168.0" text="You don't have an account? " textFill="#babebf">
+                     <HBox.margin>
+                        <Insets left="400.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signUpAction" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #6C6C6C;" text="sign up" textFill="#ffd1d1">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="403.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="329.0" textFill="#ff2323" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

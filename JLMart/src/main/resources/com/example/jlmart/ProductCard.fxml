@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jlmart.ProductController">
+   <children>
+      <ImageView fx:id="img" fitHeight="206.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox prefHeight="206.0" prefWidth="400.0" styleClass="productCard" stylesheets="@style.css">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="172.0" prefWidth="128.0">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="128.0">
+                     <children>
+                        <Label fx:id="name" alignment="CENTER" prefHeight="52.0" prefWidth="128.0" stylesheets="@style.css" text="product">
+                           <textFill>
+                              <RadialGradient centerX="0.46685082872928174" centerY="0.561611374407583" proportional="false" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.5789473652839661" green="0.39400583505630493" blue="0.39400583505630493" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.658823549747467" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font name="Blackadder ITC" size="40.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="250.0" prefWidth="128.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="128.0" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="250.0" prefWidth="128.0">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="128.0">
+                     <children>
+                        <Label fx:id="price" alignment="CENTER" prefHeight="42.0" prefWidth="128.0" stylesheets="@style.css" text="price">
+                           <textFill>
+                              <RadialGradient centerX="0.7651933701657458" centerY="0.561611374407583" proportional="false" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.5789473652839661" green="0.39400583505630493" blue="0.39400583505630493" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.658823549747467" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font name="Blackadder ITC" size="40.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openProduct" prefHeight="206.0" prefWidth="400.0" styleClass="button2" stylesheets="@style.css" />
+   </children>
+</Pane>

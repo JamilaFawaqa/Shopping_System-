@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="867.0" prefWidth="1414.0" style="-fx-background-color: #343434;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jlmart.EmployeeController">
+   <top>
+      <VBox prefHeight="99.0" prefWidth="1324.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@JLmart-removebg-preview.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Separator opacity="0.38" prefHeight="0.0" prefWidth="1414.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="767.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="768.0" prefWidth="240.0">
+               <children>
+                  <VBox prefHeight="768.0" prefWidth="254.0">
+                     <children>
+                        <Button fx:id="adddEmp" mnemonicParsing="false" onAction="#addEmp" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Add Employee" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updEmp" mnemonicParsing="false" onAction="#updateEmp" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="update Employee" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#rateCustomer" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="rate customers" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#addProduct" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Add Product" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#removeProduct" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="remove product" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#payment" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Payment" textFill="#ffd1d1">
+                           <font>
+                              <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#expDateShowBtn" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Product Expire Date" textFill="#ffd1d1" />
+                        <Button mnemonicParsing="false" onAction="#purchaseInfoBtn" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Purchase Information" textFill="#ffd1d1" />
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" styleClass="Emp" stylesheets="@style.css" text="Add Product" textFill="#ffd1d1" />
+                        <Button mnemonicParsing="false" onAction="#backBtnInEmp" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #323232;" stylesheets="@style.css" text="&lt; Back" textFill="#ffd1d1">
+                           <VBox.margin>
+                              <Insets top="240.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.38" orientation="VERTICAL" prefHeight="768.0" prefWidth="0.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Separator>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <Label fx:id="errorLabel" alignment="CENTER" prefHeight="12.0" prefWidth="954.0" textFill="#ff2222" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" />
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <TextField BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+               <center>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane fx:id="updateEmployeeBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label stylesheets="@style.css" text="Update employee information" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="85.0" text="employee ID " textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="id">
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="first name" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="firstName1">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <HBox alignment="CENTER" prefHeight="122.0" prefWidth="351.0">
+                                             <children>
+                                                <Label alignment="CENTER" text="last name" textFill="#ffd1d1">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="lastName1">
+                                                   <HBox.margin>
+                                                      <Insets left="25.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="salary" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="salary1">
+                                             <HBox.margin>
+                                                <Insets left="55.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" text="work hours" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="hours1">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="phone number" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="phoneNumber1" />
+                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="206.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#addNumber1" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="add number" textFill="#ffd1d1">
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#removeNumber" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="remove number" textFill="#ffd1d1">
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <TextArea fx:id="phoneNumbers1" prefHeight="83.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="-35.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="password" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <PasswordField fx:id="password1">
+                                             <HBox.margin>
+                                                <Insets left="33.0" />
+                                             </HBox.margin>
+                                          </PasswordField>
+                                          <HBox alignment="CENTER" prefHeight="122.0" prefWidth="351.0">
+                                             <children>
+                                                <Label alignment="CENTER" text="re-password" textFill="#ffd1d1">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <PasswordField>
+                                                   <HBox.margin>
+                                                      <Insets left="35.0" />
+                                                   </HBox.margin>
+                                                </PasswordField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="update" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="purchaseInfoBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="54.0" prefWidth="362.0" text="Purchase Information" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="214.0" prefWidth="1174.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#purchaseInfoCustomerBtn" prefHeight="58.0" prefWidth="255.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="Purchase Information For Specific Customer" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="200.0" top="70.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#purchaseInfoAllBtn" prefHeight="58.0" prefWidth="255.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="Purchase Information For All Customers" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="70.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="expDateBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="54.0" prefWidth="362.0" text="Product Expire Date" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="154.0" text="product expire date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="expDateDP" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="expDateTable" prefHeight="146.0" prefWidth="363.0">
+                                            <columns>
+                                              <TableColumn fx:id="proCodeCol" prefWidth="110.40003967285156" text="product code" />
+                                              <TableColumn fx:id="proNameCol" prefWidth="127.20001220703125" text="product name" />
+                                                <TableColumn fx:id="proAmountCol" prefWidth="124.0" text="product amount" />
+                                            </columns>
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#showResultExpDateBtn" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="show result " textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="340.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="purInfoAllBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="54.0" prefWidth="650.0" text="Purchase Information For All Customers" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="88.0" text="From date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="allFromDateDP" />
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="77.0" text="To date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="allToDateDP" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="242.0" prefWidth="1200.0">
+                                       <children>
+                                          <TableView fx:id="purchaseInfoAllTable" prefHeight="228.0" prefWidth="526.0">
+                                             <columns>
+                                                <TableColumn fx:id="purchaseNumCol" prefWidth="133.5999755859375" text="Purchase Number" />
+                                                <TableColumn fx:id="purchaseAmountCol" prefWidth="134.4000244140625" text="Purchase Amount" />
+                                                <TableColumn fx:id="customerIdCol" prefWidth="125.5999755859375" text="Customer ID" />
+                                                <TableColumn fx:id="customerNameCol" prefWidth="132.79998779296875" text="Customer Name" />
+                                             </columns>
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#backToPurchaseInfo" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="Back" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="270.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#showResultPurchaseInfoAllBtn" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="show result " textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="200.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="specificCustomerBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="54.0" prefWidth="734.0" text="Purchase Information For Specific Customer" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="106.0" text="Customer ID" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="customerIdForSpecific" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="56.0" prefWidth="88.0" text="From date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="fromDateForSpecific" prefHeight="26.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="77.0" text="To date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <DatePicker fx:id="toDateForSpecific" prefHeight="26.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="242.0" prefWidth="1200.0">
+                                       <children>
+                                          <TableView fx:id="purchaseInfoSpecificTable" prefHeight="228.0" prefWidth="526.0">
+                                             <columns>
+                                                <TableColumn fx:id="purchaseNumCol1" prefWidth="133.5999755859375" text="Purchase Number" />
+                                                <TableColumn fx:id="purchaseAmountCol1" prefWidth="134.4000244140625" text="Purchase Amount" />
+                                                <TableColumn fx:id="customerIdCol1" prefWidth="125.5999755859375" text="Customer ID" />
+                                                <TableColumn fx:id="customerNameCol1" prefWidth="132.79998779296875" text="Customer Name" />
+                                             </columns>
+                                             <HBox.margin>
+                                                <Insets left="200.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#backToPurchaseInfo1" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="Back" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="270.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#showResultPurchaseInfoSpecificBtn" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="show result " textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="200.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="customerRatingBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: dark gray;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" lineSpacing="10.0" maxHeight="100.0" maxWidth="300.0" minHeight="60.0" text="Customer Rating">
+                                       <opaqueInsets>
+                                          <Insets left="20.0" />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.9578947424888611" green="0.7556725144386292" blue="0.7556725144386292" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="1.0" green="0.8196078538894653" blue="0.8196078538894653" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="customer ID " textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="customerIdForRatingtxt">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="customer rating " textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboBox" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#submit" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="submit" textFill="#ffd1d1" textOverrun="CENTER_ELLIPSIS">
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="335.0" top="30.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="addEmployeeBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="694.0" prefWidth="1174.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label text="Add new employee" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="first name" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="firstName">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <HBox alignment="CENTER" prefHeight="122.0" prefWidth="351.0">
+                                             <children>
+                                                <Label alignment="CENTER" text="last name" textFill="#ffd1d1">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="lastName">
+                                                   <HBox.margin>
+                                                      <Insets left="57.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="salary" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="salary">
+                                             <HBox.margin>
+                                                <Insets left="55.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" text="work hours" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="hours">
+                                             <HBox.margin>
+                                                <Insets left="50.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="500.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="phone number" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="phoneNumber" />
+                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="206.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#addNumber" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="add number" textFill="#ffd1d1">
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#removeNumber" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="remove number" textFill="#ffd1d1">
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <TextArea fx:id="phoneNumbers" prefHeight="82.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="-35.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="password" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <PasswordField fx:id="password">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </PasswordField>
+                                          <HBox alignment="CENTER" prefHeight="122.0" prefWidth="351.0">
+                                             <children>
+                                                <Label alignment="CENTER" text="re-password" textFill="#ffd1d1">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <PasswordField>
+                                                   <HBox.margin>
+                                                      <Insets left="45.0" />
+                                                   </HBox.margin>
+                                                </PasswordField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signUpConfirm" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #6C6C6C;" stylesheets="@style.css" text="add" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="-50.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="paymentBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label text="Payment Section" textFill="#ffd1d1">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="123.0" text="customer ID " textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="customerIdForPaymenttxt">
+                                             <HBox.margin>
+                                                <Insets left="37.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="126.0" text="amount of pay" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="amountOfPaytxt">
+                                             <HBox.margin>
+                                                <Insets left="37.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="118.0" text="currency " textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboBoxCurrency" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="40.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#submitPayment" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="submit" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="360.0" top="25.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="removeProductBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: dark gray;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" lineSpacing="10.0" maxHeight="100.0" maxWidth="300.0" minHeight="60.0" text="Remove Product">
+                                       <opaqueInsets>
+                                          <Insets left="20.0" />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.9578947424888611" green="0.7556725144386292" blue="0.7556725144386292" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="1.0" green="0.8196078538894653" blue="0.8196078538894653" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="product code" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="productCodeToRemovetxt">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#removeProductBtn" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="Remove" textFill="#ffd1d1" textOverrun="CENTER_ELLIPSIS">
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="335.0" top="30.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="addProductBorder" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #343434;">
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label maxHeight="100.0" maxWidth="300.0" text="Add Product" textFill="#ffd1d1">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="product code" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="productCodetxt">
+                                             <HBox.margin>
+                                                <Insets left="37.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" text="product Name" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="productNametxt">
+                                             <HBox.margin>
+                                                <Insets left="58.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="product amount" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="productAmounttxt">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" text="product price" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="productPricetxt">
+                                             <HBox.margin>
+                                                <Insets left="65.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Expiary Date" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="expiaryDatetxt" prefHeight="26.0" prefWidth="151.0">
+                                             <HBox.margin>
+                                                <Insets left="45.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                          <Label alignment="CENTER" text="product Department" textAlignment="CENTER" textFill="#ffd1d1">
+                                             <padding>
+                                                <Insets bottom="38.0" left="10.0" right="10.0" top="38.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="AniMe Matrix - MB_EN" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="productDeptxt">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <children>
+                                          <Button fx:id="chooseButton" mnemonicParsing="false" onAction="#chooseImage" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: gray;" stylesheets="@style.css" text="choose image" textFill="#ffd1d1">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <TextField fx:id="imageName">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="129.0" prefWidth="800.0">
+                                       <padding>
+                                          <Insets left="200.0" />
+                                       </padding>
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#addProductBtn" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: grey;" stylesheets="@style.css" text="Add Product" textFill="#ffd1d1">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="300.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

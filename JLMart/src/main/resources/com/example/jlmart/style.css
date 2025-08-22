@@ -1,0 +1,64 @@
+.Emp:hover {
+    -fx-background-color:#002ead;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+
+}
+.Emp:focused{
+    background-color: lightblue;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.productCard{
+    -fx-background-color: linear-gradient(to top, #676767, transparent);
+}
+.button{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffd1d1;
+
+}
+.button:hover{
+    -fx-text-fill: black;
+    -fx-border-width: 0 0 2 0;
+
+}
+
+.button:focused {
+    -fx-border-color: transparent, white;
+    -fx-border-width: 0 0 2 0;
+
+}
+.tab{
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-min-width: 80px;
+    -fx-tab-max-width: 80px;
+    -fx-text-fill: red;
+}
+.button:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.button2{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.button2:hover{
+    -fx-background-color: white ;
+    -fx-opacity: 0.25;
+
+}
+.background{
+    -fx-background-color:  #343434;
+}
+.text{
+    -fx-text-fill: #ffd1d1;
+}
+
+
+
